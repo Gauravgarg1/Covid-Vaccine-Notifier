@@ -35,19 +35,16 @@ pdfDoc.pipe(fs.createWriteStream('Vaccine.pdf'));
   await page.keyboard.press("Enter",{delay: 200});
   await page.waitForSelector("._2A8P4");
   await page.click("._2A8P4");
+  await page.type("._2A8P4",JSON.stringify(slots));
+  await page.keyboard.press("Enter",{delay: 200});
   console.log(13);
+  
+  
+
   let details=JSON.stringify(slots,null,2);
-  
-  await page.click("[data-testid='clip']");
-  
-  await page.click("[data-testid='attach-document']");
-  
   pdfDoc.text(details);
 pdfDoc.end();
-const { MessageMedia } = require('whatsapp-web.js');
 
-const media = MessageMedia.fromFilePath('Vaccine.pdf');
-chat.sendMessage(media);
    
        
     
