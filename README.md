@@ -4,3 +4,4 @@
 * It visits the Cowin WebSite and fetches the data like  the center name, address, and  number of vaccines available in your area and then automatically send the information to all the persons, groups on WhatsApp by providing its name 
 * It also creates the pdf file of having that information and saves it in the local system, so they need one can take printout
 * Tech Stack used - Js, Node js, Puppeteer Module, and async-await concept
+
